@@ -34,7 +34,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('useref', function(){
-  return gulp.src('app/*.html')
+  return gulp.src('app/*.+(html|php)')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     // Minifies only if it's a CSS file
